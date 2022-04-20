@@ -15,6 +15,11 @@ pipeline {
             steps {
                  echo "Deploy stage"
             }
+         stage('Check') { 
+            steps {
+                 input("Do you want to check the resule?")
+            }
+        }
         }
     }
 }
