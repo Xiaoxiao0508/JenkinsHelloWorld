@@ -23,7 +23,7 @@ pipeline {
 //         }
           stage('SendMail') { 
             steps {
-                mail body:"$(env.JOB_NAME}",subject:"${env.JOB_NAME}",to:'cxxmelbourne@hotmail.com'
+                mail body:"${env.JOB_NAME}",subject:"${env.JOB_NAME}",to:'cxxmelbourne@hotmail.com'
             }
         }
         
