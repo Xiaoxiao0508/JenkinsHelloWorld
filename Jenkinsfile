@@ -21,9 +21,15 @@ pipeline {
 //                  input("Do you want to check the resule?")
 //             }
 //         }
-          stage('SendMail') { 
+          stage('Parallel') { 
             steps {
-                mail body:"${env.JOB_NAME}",subject:"${env.JOB_NAME}",to:'cxxmelbourne@hotmail.com'
+                parallel(
+                    a:{echo "step a"
+                      },
+                    b:{echo "step b"
+                      },
+                     c:{echo "step c"
+                      }
             }
         }
         
