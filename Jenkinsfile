@@ -30,6 +30,7 @@ pipeline {
                       },
                      c:{echo "step c"
                       }
+                    )
             }
         }
         
